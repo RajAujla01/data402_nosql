@@ -12,13 +12,16 @@ NoSQL, short for "Not Only SQL," refers to a variety of database systems that ar
 SQL databases use structured query language (SQL) to define and manipulate data. The data is stored in tables with predefined schemas.\
 **ACID Compliance**\
 Transactions in SQL databases are ACID-compliant (Atomicity, Consistency, Isolation, Durability), ensuring reliable and consistent transactions.\
-**Vertical Scalability** Typically, SQL databases scale vertically by adding more power (CPU, RAM) to an existing server.
+**Vertical Scalability**\
+Typically, SQL databases scale vertically by adding more power (CPU, RAM) to an existing server.
 
 ### NoSQL Databases
 **Flexible Schema**\
-NoSQL databases store data without a predefined schema, allowing for more flexibility. They can handle structured, semi-structured, and unstructured data.
-Eventual Consistency: Many NoSQL databases are designed for eventual consistency, where the system will be consistent over time, not necessarily immediately.
-Horizontal Scalability: NoSQL databases scale horizontally by adding more servers to the database.
+NoSQL databases store data without a predefined schema, allowing for more flexibility. They can handle structured, semi-structured, and unstructured data.\
+**Eventual Consistency**\
+Many NoSQL databases are designed for eventual consistency, where the system will be consistent over time, not necessarily immediately.\
+**Horizontal Scalability**\
+NoSQL databases scale horizontally by adding more servers to the database.
 
 
 ![ Alt Text](sql-vs-nosql.png)
@@ -82,7 +85,7 @@ Distributing data across multiple machines to ensure that no single machine is o
 Redundant copies of data across multiple servers ensure that the database remains available even if one server fails.
 
 **Performance**\
-Can handle large volumes of read and write operations with low latency.\
+Can handle large volumes of read and write operations with low latency.
 
 **Flexibility**\
 Easily adapt to changing data requirements without needing to restructure
