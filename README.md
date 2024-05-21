@@ -3,16 +3,16 @@
 ![ Alt Text](1688042311973.png)
 
 ## What is NoSQL?
-NoSQL, short for "Not Only SQL," refers to a variety of database systems that are designed to handle large volumes of data that don't necessarily fit into traditional relational databases. Unlike SQL databases, NoSQL databases are more flexible and scalable, often making them ideal for big data applications and real-time web apps.
+NoSQL, short for "Not Only SQL," refers to a variety of database systems that are designed to handle large volumes of data that don't necessarily fit into traditional relational databases. Unlike SQL databases NoSQL databases are more flexible and scalable, often making them ideal for big data applications and real-time web apps.
 
 ## Comparing SQL to NoSQL
 ### SQL Databases
 
 **Structured Data**\
-SQL databases use structured query language (SQL) to define and manipulate data. The data is stored in tables with predefined schemas.
-ACID Compliance: Transactions in SQL databases are ACID-compliant (Atomicity, Consistency, Isolation, Durability), ensuring reliable and consistent transactions.
-Vertical Scalability: Typically, SQL databases scale vertically by adding more power (CPU, RAM) to an existing server.
-NoSQL Databases:
+SQL databases use structured query language (SQL) to define and manipulate data. The data is stored in tables with predefined schemas.\
+**ACID Compliance**\
+Transactions in SQL databases are ACID-compliant (Atomicity, Consistency, Isolation, Durability), ensuring reliable and consistent transactions.\
+**Vertical Scalability** Typically, SQL databases scale vertically by adding more power (CPU, RAM) to an existing server.
 
 ### NoSQL Databases
 **Flexible Schema**\
@@ -118,7 +118,7 @@ Description: Store data in nodes, edges, and properties. Perfect for data with c
 
 **Time Series Databases**\
 Examples: InfluxDB, TimescaleDB\
-Description: Optimized for time-stamped or time-series data, such as log data or IoT sensor data.
+Description: Optimised for time-stamped or time-series data, such as log data or IoT sensor data.
 
 **Object-Oriented Databases**\
 Examples: db4o, ObjectDB\
@@ -139,7 +139,7 @@ Use Case: LinkedIn uses Voldemort for various services that require high availab
 
 ### eBay
 Database Used: HBase\
-Use Case: eBay utilizes HBase to store and process vast amounts of transactional data. HBase's ability to scale horizontally allows eBay to handle heavy traffic and large datasets.
+Use Case: eBay utilises HBase to store and process vast amounts of transactional data. HBase's ability to scale horizontally allows eBay to handle heavy traffic and large datasets.
 
 ### Conclusion
 NoSQL databases offer a powerful alternative to traditional SQL databases, providing flexibility, scalability, and high performance for handling large volumes of diverse data. While they come with their own set of challenges, their benefits make them suitable for many modern applications, from social media to e-commerce. Understanding the different types of NoSQL databases and their use cases can help you choose the right solution for your specific needs.
