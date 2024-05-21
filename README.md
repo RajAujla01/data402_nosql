@@ -103,6 +103,7 @@ Managing a distributed system can be complex and may require specialized knowled
 While NoSQL databases excel at simple queries and fast access, they might not be as efficient for complex queries that involve multiple data relationships.
 
 ### Types of NoSQL Databases
+![ Alt Text](1_laS_seNgu9iDKDmhSn1hKQ.png)
 **Document Stores**\
 Examples: MongoDB, CouchDB\
 Description: Store data as documents, typically in JSON or BSON format.
@@ -128,6 +129,7 @@ Examples: db4o, ObjectDB\
 Description: Store data in objects, similar to object-oriented programming languages.
 
 # Case Studies
+![ Alt Text](The-most-popular-NoSQL-databases.png)
 ### Twitter
 Database Used: Cassandra\
 Use Case: Twitter uses Cassandra to store billions of tweets. Cassandra's ability to handle large volumes of data across multiple servers ensures high availability and fast read/write operations.
