@@ -114,12 +114,13 @@ db.characters.find({ height: { $gt: 200 } });
 
 10.
 
-| $eq  | equal to                  |      
-|------|---------------------------|
-| $gt  | greater than              |      
-| $gte | greather than or equal to |      
-| $in  | in                        |      
-| $lt  | less than                 |      
-| $lte | less than or equal to     |      
-| $ne  | not equal to              |       
-| $nin | not in                    |      
+| Operator | Meaning                   |      
+|----------|---------------------------|
+| $eq      | equal to                  | 
+| $gt      | greater than              |      
+| $gte     | greather than or equal to |      
+| $in      | in                        |      
+| $lt      | less than                 |      
+| $lte     | less than or equal to     |      
+| $ne      | not equal to              |       
+| $nin     | not in                    |      
