@@ -2,12 +2,17 @@
 
 
 1.
+### Created collection for films, added 3 documents
 ![ Alt Text](mongo_exercise1.png)
 
 2.
+### Add new document to collection
 ![ Alt Text](mongo_exercise2i.png)
+### Add new field to document
 ![ Alt Text](mongo_exercise2ii.png)
+### Remove field from document
 ![ Alt Text](mongo_exercise2iii.png)
+### Remove document from collection
 ![ Alt Text](mongo_exercise2iiii.png)
 3.
 ### **MongoDB Tools successfully installed**
