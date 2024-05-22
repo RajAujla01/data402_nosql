@@ -25,6 +25,7 @@
 switched to db starwars
 db.characters.findOne({ name: "Luke Skywalker" });
 ```
+![ Alt Text](mongo_exercise5i.png)
 ```
 db.characters.findOne({ name: "Chewbacca" }, { name: 1, eye_color: 1, _id: 0 });
 {
@@ -32,6 +33,7 @@ db.characters.findOne({ name: "Chewbacca" }, { name: 1, eye_color: 1, _id: 0 });
   eye_color: 'blue'
 }
 ```
+![ Alt Text](mongo_exercise5ii.png)
 ```
 db.characters.findOne({ name: "Ackbar" }, { "species.name": 1, _id: 0 });
 {
@@ -40,13 +42,16 @@ db.characters.findOne({ name: "Ackbar" }, { "species.name": 1, _id: 0 });
   }
 }
 ```
+![ Alt Text](mongo_exercise5iii.png)
 
+6. 
 ```
 db.characters.find(
   { "species.name": "Human" },  // human species
   { name: 1, homeworld: 1, _id: 0 }  // nly the name and homeworld fields, exclude the _id field as included by default
 );
 ```
+![ Alt Text](mongo_exercise6.png)
 7.
 ```
 db.characters.find(
