@@ -5,6 +5,7 @@
 ## What is NoSQL?
 NoSQL, short for "Not Only SQL," refers to a variety of database systems that are designed to handle large volumes of data that don't necessarily fit into traditional relational databases. Unlike SQL databases NoSQL databases are more flexible and scalable, often making them ideal for big data applications and real-time web apps.
 
+[NoSQL Explained By MongoDB](https://www.mongodb.com/resources/basics/databases/nosql-explained)
 ## Comparing SQL to NoSQL
 ### SQL Databases
 
@@ -154,6 +155,7 @@ NoSQL databases offer a powerful alternative to traditional SQL databases, provi
 ## What is MongoDB
 MongoDB is a type of database that stores information in a flexible way. Unlike traditional databases with strict rows and columns, MongoDB uses collections and documents.
 
+[MongoDB Official Website](https://www.mongodb.com/)
 ### Collections
 Think of these as the labeled boxes in our filing cabinet. Each collection holds a specific type of information, like "Customers," "Products," or "Orders."
 
