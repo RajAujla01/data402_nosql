@@ -131,20 +131,105 @@ Description: Store data in objects, similar to object-oriented programming langu
 # Case Studies
 ![ Alt Text](The-most-popular-NoSQL-databases.png)
 ### Twitter
-Database Used: Cassandra\
-Use Case: Twitter uses Cassandra to store billions of tweets. Cassandra's ability to handle large volumes of data across multiple servers ensures high availability and fast read/write operations.
+**Database Used**: Cassandra\
+**Use Case**: Twitter uses Cassandra to store billions of tweets. Cassandra's ability to handle large volumes of data across multiple servers ensures high availability and fast read/write operations.
 
 ### Netflix
-Database Used: DynamoDB, Cassandra\
-Use Case: Netflix relies on NoSQL databases for its scalable architecture to handle streaming data, user data, and personalized recommendations. The distributed nature of NoSQL databases helps Netflix manage massive amounts of data efficiently.
+**Database Used**: DynamoDB, Cassandra\
+**Use Case**: Netflix relies on NoSQL databases for its scalable architecture to handle streaming data, user data, and personalized recommendations. The distributed nature of NoSQL databases helps Netflix manage massive amounts of data efficiently.
 
 ### LinkedIn
-Database Used: Voldemort (a key-value store)\
-Use Case: LinkedIn uses Voldemort for various services that require high availability and speed, such as managing member profile data and activity feeds.
+**Database Used**: Voldemort (a key-value store)\
+**Use Case**: LinkedIn uses Voldemort for various services that require high availability and speed, such as managing member profile data and activity feeds.
 
 ### eBay
-Database Used: HBase\
-Use Case: eBay utilises HBase to store and process vast amounts of transactional data. HBase's ability to scale horizontally allows eBay to handle heavy traffic and large datasets.
+**Database Used**: HBase\
+**Use Case**: eBay utilises HBase to store and process vast amounts of transactional data. HBase's ability to scale horizontally allows eBay to handle heavy traffic and large datasets.
 
 ### Conclusion
 NoSQL databases offer a powerful alternative to traditional SQL databases, providing flexibility, scalability, and high performance for handling large volumes of diverse data. While they come with their own set of challenges, their benefits make them suitable for many modern applications, from social media to e-commerce. Understanding the different types of NoSQL databases and their use cases can help you choose the right solution for your specific needs.
+
+# MongoDB
+![ Alt Text](image-blog-openlogic-what-is-mongodb.webp)
+## What is MongoDB
+MongoDB is a type of database that stores information in a flexible way. Unlike traditional databases with strict rows and columns, MongoDB uses collections and documents.
+
+### Collections
+Think of these as the labeled boxes in our filing cabinet. Each collection holds a specific type of information, like "Customers," "Products," or "Orders."
+
+### Documents 
+These are the individual items inside each box. Each document holds information about a single thing within the collection. For a "Customers" collection, a document might have details about one customer, like their name, address, and purchase history.
+Documents are written in a format called BSON (Binary JSON), which is a binary representation of JSON-like documents. Each document contains a set of key-value pairs, where the keys are strings and the values can be a variety of data types, including other documents, arrays, and more.
+![ Alt Text](hierachy.webp)
+
+
+## MongoDB Architecture
+### How Does It Work?
+MongoDB's architecture is designed for high performance and scalability.
+Unlike a filing cabinet you have to physically open, MongoDB uses a program called **mongod** to run in the background. This program manages all the data and makes it accessible to other applications through a special language, like a secret code to access the filing cabinet.
+
+
+
+**Database**\
+The top-level container for collections\
+**Collection**\
+A grouping of documents\
+**Document**\
+The individual data entries within a collection\
+**Instance**\
+The running instance of MongoDB which can host multiple databases.
+
+## What are Replica Sets?
+Imagine having multiple copies of your filing cabinet in different locations. Replica sets create copies of your data on other servers so if one server fails, another can take over seamlessly.
+
+![ Alt Text](replica-set-read-write-operations-primary.bakedsvg.svg)
+## What is Sharding?
+As your collection grows, a single box (collection) might become overloaded. Sharding helps distribute the data across multiple servers, like having multiple filing cabinets to handle a massive document collection.
+![ Alt Text](MongoDB-Architecture.png)
+## Advantages of MongoDB
+**Flexible Schema**\
+You can store different types of data within the same collection.
+
+**Scalability**\
+Easy to scale horizontally using sharding.
+
+**Performance**\
+High performance for read and write operations.
+
+**High Availability**\
+Ensured through replica sets.
+
+**Ease of Use**\
+Simple to set up and use, especially for developers.
+
+
+![ Alt Text](1_e7PS2M3yargTtfGpck_s7Q.jpg)
+
+## Disadvantages of MongoDB
+**Memory Usage**\
+Can use a lot of memory since it keeps working sets in RAM.
+
+**Complex Transactions**\
+Handling complex transactions can be challenging compared to traditional relational databases.
+
+**Joins**\
+Lacks traditional join operations, making some queries more complex.
+
+**Data Consistency**\
+In some cases, ensuring strong data consistency can be complex.
+
+## What Scenarios is MongoDB Good For?
+Websites and applications that deal with large amounts of constantly changing data, like social media platforms or e-commerce stores.
+
+![ Alt Text](images.jpg)
+
+Storing complex data with various structures, like product information with images, descriptions, and reviews.
+
+![ Alt Text](ecommerce-1.webp)
+
+
+## What Scenarios is MongoDB Not Good For?
+Simple applications with well-defined data structures.
+
+Situations where strict data organisation and complex queries are essential.
+
