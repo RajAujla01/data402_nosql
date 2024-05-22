@@ -52,13 +52,14 @@ db.characters.find(
 );
 ```
 ![ Alt Text](mongo_exercise6.png)
+
 7.
 ```
 db.characters.find(
   { eye_color: { $in: ["yellow", "orange"] } }
 );
 ```
-
+![ Alt Text](mongo_exercise9.png)
 8.
 ```
 db.characters.find({
@@ -66,6 +67,7 @@ db.characters.find({
   gender: "female"
 });
 ```
+![ Alt Text](mongo_exercise8.png)
 ```
 db.characters.find({
   $or: [
@@ -107,7 +109,7 @@ db.characters.updateMany(
 ```
 db.characters.find({ height: { $gt: 200 } });
 ```
-
+![ Alt Text](mongoex9.png)
 
 
 10.
