@@ -2,7 +2,7 @@
 
 
 1.
-### Created collection for films, added 3 documents
+### Created collection for films, added documents
 ![ Alt Text](mongo_exercise1.png)
 
 2.
