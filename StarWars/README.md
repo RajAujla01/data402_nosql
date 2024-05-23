@@ -210,19 +210,19 @@ Aggregation is a way of processing a large number of documents in a collection b
 Here's how it works in a nutshell:
 
 **Pipeline Stages**\
-Aggregation works in stages, like a recipe. Each stage performs a specific task on the documents, such as filtering (picking only Jedi characters), grouping (putting them all in a group), or calculating something (counting the total number of Jedi).
+Aggregation works in stages, like a recipe. Each stage performs a specific task on the documents such as filtering (picking only Jedi characters), grouping (putting them all in a group), or calculating something (counting the total number of Jedi).
 
 **Input and Output**\
-The documents flow through these stages, and the output of one stage becomes the input for the next. It's like passing ingredients through different steps in a recipe.
+The documents flow through these stages and the output of one stage becomes the input for the next. It's like passing ingredients through different steps in a recipe.
 
 **Common Stages**\
-Some common stages you'd use in your Star Wars adventure include:
+Some common stages you'd use in your Star Wars database include:
 
 **$match**\
-This stage is like a sieve, filtering documents based on certain criteria. For example, you could filter for characters with lightsabers.
+This stage is like a sieve filtering documents based on certain criteria. E.g., you could filter for characters with lightsabers.
 
 **$group**\
-This stage is like sorting characters into groups based on a field, like the lightsaber color (blue or red). You can also perform calculations within each group, like counting the number of characters in each color group.
+This stage is like sorting characters into groups based on a field, like the lightsaber colour (blue or red). You can also perform calculations within each group, like counting the number of characters in each colour group.
 
 **$sum**\
 This stage is like adding things up. You could use it to find the total number of Jedi in your collection.
