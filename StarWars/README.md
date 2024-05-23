@@ -3,17 +3,68 @@
 
 1.
 ### Created collection for films, added documents
+```commandline
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["title", "year", "genre"],
+    "properties": {
+      "title": {
+        "bsonType": "string",
+        "description": "must be a string and is required"
+      },
+      "year": {
+        "bsonType": "int",
+        "minimum": 1900,
+        "maximum": 2024,
+        "description": "must be an integer between 1900 and 2024 and is required"
+      },
+      "genre": {
+        "bsonType": "string",
+        "description": "must be a string and is required"
+      }
+    }
+  }
+}
+
+```
 ![ Alt Text](mongo_exercise1.png)
 
 2.
 ### Add new document to collection
 ![ Alt Text](mongo_exercise2i.png)
+```commandline
+db.favorite_films.insertOne({
+  title: "Inception",
+  year: 2010,
+  genre: "Science Fiction"
+});
+
+```
 ### Add new field to document
 ![ Alt Text](mongo_exercise2ii.png)
+```commandline
+db.favorite_films.updateOne(
+  { title: "The Shawshank Redemption" },
+  { $set: { director: "Frank Darabont" } }
+);
+
+```
 ### Remove field from document
 ![ Alt Text](mongo_exercise2iii.png)
+```commandline
+db.favorite_films.updateOne(
+  { title: "The Shawshank Redemption" },
+  { $unset: { director: "" } }
+);
+
+```
 ### Remove document from collection
 ![ Alt Text](mongo_exercise2iiii.png)
+```commandline
+db.favorite_films.deleteOne({ title: "The Shawshank Redemption" });
+
+```
 3.
 ### **MongoDB Tools successfully installed**
 
