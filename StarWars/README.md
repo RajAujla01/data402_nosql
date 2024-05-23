@@ -384,10 +384,20 @@ We could then use the same lookup as before - it works with ObjectIds in arrays 
 }
 
 {
-  _id: ObjectId('664f1e4facec08c217c3d400'),
+  _id: ObjectId('664f2021acec08c217c3d401'),
   name: 'Millennium Falcon',
   model: 'YT-1300 light freighter',
-  matched_pilot: []
+  matched_pilot: [
+    {
+      name: 'Chewbacca'
+    },
+    {
+      name: 'Lando Calrissian'
+    },
+    {
+      name: 'Han Solo'
+    }
+  ]
 }
 ```
 # PYMONGO AGGREGATION
