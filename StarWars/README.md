@@ -145,7 +145,7 @@ db.characters.find({ height: { $gt: 200 } });
 Note: Height has been recorded as a string and there are some missing a height value entirely. Can you find out how to convert all the height strings to ints?
 ```
 db.characters.updateMany(
-  { height: "unknown" }, // Filter for documents where height is "unknown"
+  { height: "unknown" }, // filter for documents where height is "unknown"
   [
     { 
       $set: { 
@@ -299,20 +299,20 @@ db.characters.aggregate([
 ### Write a query that finds the mass and count per species. Filter out null values and sort by average mass (ascending order)
 ```commandline
 db.characters.aggregate([
-  // 1. Filter out documents with null or "unknown" mass
+  // filter out docs with null or "unknown" mass
   {
     $match: {
       mass: { $ne: "unknown" },
       mass: { $ne: null }
     }
   },
-  // 2. Convert mass from string to integer
+  // convert mass from str to int
   {
     $addFields: {
       mass: { $toInt: "$mass" }
     }
   },
-  // 3. Group by species name and calculate average mass and count
+  // group by species name and calculate average mass and count
   {
     $group: {
       _id: "$species.name",
@@ -320,7 +320,7 @@ db.characters.aggregate([
       count: { $sum: 1 }
     }
   },
-  // 4. Sort by average mass in ascending order
+  // sort by average mass in ascending order
   {
     $sort: {
       averageMass: 1
