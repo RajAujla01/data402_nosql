@@ -35,7 +35,7 @@ db.characters.findOne({ name: "Chewbacca" }, { name: 1, eye_color: 1, _id: 0 });
   eye_color: 'blue'
 }
 ```
-check the species name of admiral ackbar, this is in an embedded document ("Species")
+Check the species name of admiral ackbar, this is in an embedded document ("Species")
 ![ Alt Text](mongo_exercise5ii.png)
 ```
 db.characters.findOne({ name: "Ackbar" }, { "species.name": 1, _id: 0 });
@@ -58,7 +58,7 @@ db.characters.find(
 ![ Alt Text](mongo_exercise6.png)
 
 7.
-query that gives us all the entries that have an eye_colour of either "yellow" or "orange"
+Query that gives us all the entries that have an eye_colour of either "yellow" or "orange"
 ```
 db.characters.find(
   { eye_color: { $in: ["yellow", "orange"] } }
@@ -66,7 +66,7 @@ db.characters.find(
 ```
 ![ Alt Text](mongo_exercise9.png)
 8.
-query that filter for characters that have both blue eyes and are female
+Query that filter for characters that have both blue eyes and are female
 ```
 db.characters.find({
   eye_color: "blue",
