@@ -393,29 +393,9 @@ We could then use the same lookup as before - it works with ObjectIds in arrays 
 # PYMONGO AGGREGATION
 
 Exercise 1 - What is the average height of female characters?
-```commandline
-db.characters.aggregate([
-  // match docs where gender is female
-  { $match: { gender: "female" } },
-  
-  // group docs and calculate average height
-  { 
-    $group: {
-      _id: null,
-      average_height: { $avg: "$height" }
-    } 
-  }
-]);
+![ Alt Text](advanced1.png)
 ```
-```
-{
-  _id: null,
-  average_height: 165.47058823529412
-}
-```
-Exercise 2 - Which character is the tallest?
-```commandline
-db.characters.find().sort({ "height": -1 }).limit(1)
 
 ```
-![ Alt Text](basic5.png)
+Exercise 2 - Which character is the tallest?
+![ Alt Text](advanced2.png)
