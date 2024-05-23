@@ -21,11 +21,13 @@
 ### Star Wars Zip successfully downloaded, extracted and command successfully ran
 ![ Alt Text](mongo_exercise4.png)
 5.
+Query that finds the Luke Skywalker document
 ```
 switched to db starwars
 db.characters.findOne({ name: "Luke Skywalker" });
 ```
 ![ Alt Text](mongo_exercise5i.png)
+Return the value of name and eye_colour only, from the "chewbacca" document
 ```
 db.characters.findOne({ name: "Chewbacca" }, { name: 1, eye_color: 1, _id: 0 });
 {
@@ -33,6 +35,7 @@ db.characters.findOne({ name: "Chewbacca" }, { name: 1, eye_color: 1, _id: 0 });
   eye_color: 'blue'
 }
 ```
+check the species name of admiral ackbar, this is in an embedded document ("Species")
 ![ Alt Text](mongo_exercise5ii.png)
 ```
 db.characters.findOne({ name: "Ackbar" }, { "species.name": 1, _id: 0 });
@@ -45,6 +48,7 @@ db.characters.findOne({ name: "Ackbar" }, { "species.name": 1, _id: 0 });
 ![ Alt Text](mongo_exercise5iii.png)
 
 6. 
+Query that gives us only the names + homeworld names of humans in the database
 ```
 db.characters.find(
   { "species.name": "Human" },  // human species
@@ -54,6 +58,7 @@ db.characters.find(
 ![ Alt Text](mongo_exercise6.png)
 
 7.
+query that gives us all the entries that have an eye_colour of either "yellow" or "orange"
 ```
 db.characters.find(
   { eye_color: { $in: ["yellow", "orange"] } }
@@ -61,13 +66,16 @@ db.characters.find(
 ```
 ![ Alt Text](mongo_exercise9.png)
 8.
+query that filter for characters that have both blue eyes and are female
 ```
 db.characters.find({
   eye_color: "blue",
   gender: "female"
 });
 ```
+
 ![ Alt Text](mongo_exercise8.png)
+Query that filters for characters that have either blue eyes or are female
 ```
 db.characters.find({
   $or: [
@@ -78,9 +86,12 @@ db.characters.find({
 ```
 
 9.
+Write a query that finds characters with a height over 200cm
+
 ```
 db.characters.find({ height: { $gt: 200 } });
 ```
+Note: Height has been recorded as a string and there are some missing a height value entirely. Can you find out how to convert all the height strings to ints?
 ```
 db.characters.updateMany(
   { height: "unknown" }, // Filter for documents where height is "unknown"
@@ -109,6 +120,7 @@ db.characters.updateMany(
 ```
 db.characters.find({ height: { $gt: 200 } });
 ```
+Run your initial height query again to confirm your solution works.
 ![ Alt Text](mongoex9.png)
 
 
